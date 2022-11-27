@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import colors from "colors";
 
-import products from "./data/products.js";
 import connectDB from "./config/db.js";
 import productRoutes from "./routes/product.js";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
