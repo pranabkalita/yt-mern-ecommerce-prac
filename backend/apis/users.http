@@ -5,3 +5,17 @@ Content-Type: application/json
   "email": "admin@example.com",
   "password": "password"
 }
+
+###
+GET http://localhost:5000/api/users/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzODIwODZkNDUxNjAxNjE0OWFkYzc1ZSIsImlhdCI6MTY2OTU2NjczNSwiZXhwIjoxNjcyMTU4NzM1fQ.l4La25tsa3IidB1Py0Mtar8_toERbjc2QVOnPb48ThA
+
+###
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+  "name": "Test Doe",
+  "email": "test@mail.com",
+  "password": "password"
+}
