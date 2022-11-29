@@ -37,7 +37,7 @@ const registerUser = asyncHandler(async (req, res) => {
   const userExists = await User.findOne({ email });
 
   if (userExists) {
-    res.sendStatus(400);
+    res.status(400);
     throw new Error("User already exists.");
   }
 
@@ -56,7 +56,7 @@ const registerUser = asyncHandler(async (req, res) => {
       token: generateToken(user._id),
     });
   } else {
-    res.sendStatus(400);
+    res.status(400);
     throw new Error("Invalid user data.");
   }
 });
@@ -77,7 +77,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
       isAdmin: user.isAdmin,
     });
   } else {
-    res.sendStatus(400);
+    res.status(400);
   }
 });
 
