@@ -2,7 +2,7 @@ POST http://localhost:5000/api/users/login
 Content-Type: application/json
 
 {
-  "email": "admin@example.com",
+  "email": "john@example.com",
   "password": "password"
 }
 
@@ -17,5 +17,16 @@ Content-Type: application/json
 {
   "name": "Test Doe",
   "email": "test@mail.com",
+  "password": "password"
+}
+
+###
+PUT http://localhost:5000/api/users/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzODIwODZkNDUxNjAxNjE0OWFkYzc1ZiIsImlhdCI6MTY2OTc3Nzg3NCwiZXhwIjoxNjcyMzY5ODc0fQ.gdSqaAdRBBZL-92XTqdB3BVMhAi6eoPq2tos--Mch4k
+
+{
+  "name":  "Mr. John Doe",
+  "email": "john@example.com",
   "password": "password"
 }
